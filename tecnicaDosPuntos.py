@@ -58,6 +58,22 @@ def sortNumeros(lista):
             i+=1
     return lista
 
+
+listaSelect = [1,4,5,6,2,3,4,1,3,4,0]
+def selectSort(lista):
+    for i in range(len(lista) - 1):
+        smallest = i
+        for j in range(i+1, len(lista)):
+            if lista[j] < lista[smallest]:
+                smallest = j
+    
+        lista[i], lista[smallest] = lista[smallest], lista[i]
+    return lista
+
+def ordenacionInsercion(lista):
+    pass
+print("select sort")
+print(selectSort(listaSelect))
 print(sortNumeros(listaSort))
 print(moverZeros(listaZeros))
 ordenarNumeros(lista)
